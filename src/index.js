@@ -1,4 +1,5 @@
 const mapboxgl = require('mapbox-gl');
+const buildMarker = require('buildMarker');
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiaWRvbnR3YW50dG8iLCJhIjoiY2prazQyMzZ2NjI3bzNxbWxpMWt4anA1MCJ9.XELVWmy1OWCYj-_RKi9iKA';
@@ -16,3 +17,6 @@ markerDomEl.style.height = '39px';
 markerDomEl.style.backgroundImage = 'url(http://i.imgur.com/WbMOfMl.png)';
 
 new mapboxgl.Marker(markerDomEl).setLngLat([-74.009151, 40.705086]).addTo(map);
+
+const marker = buildMarker("restaurant", [-87.641, 41.895]); // or [-87.6354, 41.8885]
+marker.addTo(map);
